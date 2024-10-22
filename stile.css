@@ -1,0 +1,102 @@
+body {
+    margin: 0; /*внешнего отступа у элемента*/
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 650px;
+    height: 800px;
+    background: #E6E6E6;
+    border-radius: 15px;
+    padding: 45px 60px;
+    display: grid;
+    grid-template-rows: 66px 711px;
+    gap: 22px;
+}
+
+.app__controls {
+    display: grid;
+    grid-template-columns: auto 160px;
+}
+
+.app__controls-input {
+    border: none;
+    border-radius: 10px 0 0 10px;
+    font-size: 20px;  /*размер шрифта*/
+    padding: 5px 10px; /*расстояние сверху снизу 5, слева справа 10*/
+}
+
+.app__controls-input:focus-visible {
+    outline: 0;
+}
+
+.app__controls-button { /*всё что связано с самой кнопкой добавить */
+    border: none; 
+    border-radius: 0 10px 10px 0;
+    background: #FBCC28;
+    font-size: 20px; /*размер шрифта*/
+}
+
+
+.app__controls-button:hover { /*затемнение кнопки добавить при наведении курсора*/
+    background: #dbb21c;
+}
+
+.app__list {
+    background: white; /*белый фон под иконками задач*/ 
+    border-radius: 15px;
+    padding: 20px; /*отступ от края белого фона до задачи */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto; /*ролик при нехватки места для задач*/
+}
+
+.app__list-item {
+    background: #FFEBEB;
+    display: flex;
+    align-items: center; /*элементы в кнопке задачи по центральной горизонтали*/
+    justify-content: space-between; /*растягивает элементы задачи (галочка слева, мусорка справа, текст занимает всю середину)*/
+    gap: 10px; /*расстояние между галочкой и текстом задачи */
+    padding: 30px 20px; /*пространство красное (свеху-снизу текста задачи 30, слева-справа 20)*/
+    border-radius: 10px;
+}
+
+.app__list-btn {
+    background: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.app__list-btn:hover {
+    background: rgb(248, 90, 90); /*подсвечивает мусорку при наведении мышью*/
+}
+
+
+button:hover {
+    cursor: pointer;
+}
+
+.app__list-checkbox {
+    display: block;
+    width: 20px;  /*размер клетки для галочки */
+    height: 20px;
+    margin: 0;
+}
+
+.app__list-item-text {
+    margin: 0;
+    flex-grow: 1; /*выравнивание текста задачи по левому краю*/
+    font-size: 20px; /*размер шрифта*/
+}
+
+.app__list-item_done {
+    background: #EBFFED;
+    text-decoration: line-through;
+}
